@@ -15,7 +15,7 @@
 
   <!-- import aframe and then ar.js with image tracking / location based features -->
   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-  
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
   <script src="./play-on-click.js"></script>
 
   
@@ -32,10 +32,19 @@
   
 
   <!-- a-frame scene -->
-  <a-scene 
-   
+  <a-scene vr-mode-ui="enabled: false;"
+    renderer="logarithmicDepthBuffer: true;" 
+    embedded
+    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
 
-  </a-scene>
+    <!-- static camera that moves according to the device movemenents -->
+    <a-entity id="camera" camera position="0 0 10"></a-entity>
+
+    <a-assets>
+
+      </a-assets>
+    </a-entity>
+    </a-scene>
 
 </body>
 
